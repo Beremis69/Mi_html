@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Velocidad</title>
+</head>
+<body>
+	<h1>Datos del movil</h1>
+	<label for="D">Ingrese la distancia en Km: </label>
+	<input type="number" id="D" name="D">
+    <label for="T">Ingrese el tiempo en horas: </label>
+    <input type="number" id="T" name="T">
+    <button type="button" onclick="tr()">Calcular</button>
+    <button type= "button"onclick= "sr()">Regresar al menu principal</button>
+    <h1>Informacion</h1>
+    <p><span id="V"></span></p>
+    <p><span id="L"></span></p>
+<script>
+	function tr() {
+		const X1= parseFloat(document.getElementById('D').value);
+		const X2= parseFloat(document.getElementById('T').value);
+		const R = X1 / X2;
+		document.getElementById("V").textContent="La velocidad del movil es de:  " + R.toFixed(2) + "km/h";
+		if (R>=100){
+			document.getElementById("L").textContent="Velocidad alta";
+		}
+		else{
+			document.getElementById("L").textContent="Velocidad normal";
+		}
+    }
+    function sr() {
+    	window.open("file:///C:/Users/Cristobal/Desktop/HTML/Menu.html");
+    	window.close("file:///C:/Users/Cristobal/Desktop/HTML/Velocidad.html");
+    }
+</script>
+</body>
+</html>

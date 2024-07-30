@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú</title>
+</head>
+<body>
+<h1>Menú Principal</h1>
+<p>Serás redirigido automáticamente a la página correspondiente.</p> 
+<p>_____________________________________________________________</p>
+<p>1. Multiplicaciones</p>
+<p>2. Velocidad</p>
+<p>3. Terrenos</p>
+<p>4. Conversión de monedas</p>
+<p>5. Notas</p>
+
+<label for="A1">Opción:</label>
+<input type="number" id="A1" name="A1">
+<button type="button" onclick="tr()">Ir</button>
+<script>
+  function tr() {
+    const A = parseInt(document.getElementById('A1').value);
+    
+    if (A === 1) {
+      window.open("file:///C:/Users/Cristobal/Desktop/HTML/Multiplicaciones.html");
+      window.close("file:///C:/Users/Cristobal/Desktop/HTML/Menu.html");
+    } else if (A === 2) {
+      window.open("file:///C:/Users/Cristobal/Desktop/HTML/Velocidad.html");
+      window.close("file:///C:/Users/Cristobal/Desktop/HTML/Menu.html");
+    } else if (A === 3) {
+      window.open("file:///C:/Users/Cristobal/Desktop/HTML/Terrenos.html");
+      window.close("file:///C:/Users/Cristobal/Desktop/HTML/Menu.html");
+    } else if (A === 4) {
+      window.open("file:///C:/Users/Cristobal/Desktop/HTML/Conversion%20de%20moneda.html");
+      window.close("file:///C:/Users/Cristobal/Desktop/HTML/Menu.html");
+    } else if (A === 5) {
+      window.open("file:///C:/Users/Cristobal/Desktop/HTML/Notas.html");
+      window.close("file:///C:/Users/Cristobal/Desktop/HTML/Menu.html");
+    } else {
+      alert("Opción no válida. Introduce un número del 1 al 5.");
+    }
+  }
+</script>
+
+</body>
+</html>

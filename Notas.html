@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Notas</title>
+</head>
+<body>
+	<h1>Ingrese los datos</h1>
+	<label for="N1">Nota1:</label>
+	<input type="number" id="N1" name="N1">
+	<label for="N2">Nota2:</label>
+	<input type="number" id="N2" name="N2">
+	<label for="N3">Nota3:</label>
+	<input type="number" id="N3" name="N3">
+    <label for="N4">Nota4:</label>
+    <input type="number" id="N4" name="N4">
+    <button type="button" onclick="tr()">Calcular</button>
+    <button type= "button"onclick= "sr()">Regresar al menu principal</button>
+    <h1>Resultados</h1>
+    <p><span id="X1"></span></p>
+    <p><span id="X2"></span></p>
+    <p><span id="X3"></span></p>
+    <p><span id="X4"></span></p>
+    <p><span id="X5"></span></p>
+    <p><span id="X6"></span></p>
+<script>
+	function tr() {
+		const A= parseFloat(document.getElementById('N1').value);
+		const B= parseFloat(document.getElementById('N2').value);
+		const C= parseFloat(document.getElementById('N3').value);
+		const D= parseFloat(document.getElementById('N4').value);
+		const R1 = A + B + C + D;
+		const R2 = R1 / 4;
+		document.getElementById("X1").textContent="Promedio: " + R2.toFixed(2);
+		document.getElementById("X2").textContent="Total: " + R1.toFixed(2);
+		if (A>B && A>C && A>D){
+			document.getElementById("X3").textContent="Nota mas alta: " + A.toFixed(2);
+		}
+		else if (B>C && B>D){
+			document.getElementById("X3").textContent="Nota mas alta: " + B.toFixed(2);
+		}
+		else if (C>D){
+			document.getElementById("X3").textContent="Nota mas alta: " + C.toFixed(2);
+		}
+		else{
+			document.getElementById("X3").textContent="Nota mas alta: " + D.toFixed(2);
+		}
+
+		if (A<B && A<C && A<D){
+			document.getElementById("X4").textContent="Nota mas baja: " + A.toFixed(2);
+		}
+		else if (B<C && B<D){
+			document.getElementById("X4").textContent="Nota mas baja: " + B.toFixed(2);
+		}
+		else if (C<D){
+			document.getElementById("X4").textContent="Nota mas baja: " + C.toFixed(2);
+		}
+		else {
+			document.getElementById("X4").textContent="Nota mas baja: " + D.toFixed(2);
+		}
+		if (R2>=60){
+			document.getElementById("X6").textContent="Felicidades, has aprobado...!!";
+		}
+		else {
+			document.getElementById("X6").textContent="Lamentablemente has reprobado.";
+		}
+    }
+    function sr() {
+    	window.open("file:///C:/Users/Cristobal/Desktop/HTML/Menu.html");
+    	window.close("file:///C:/Users/Cristobal/Desktop/HTML/Notas.html");
+    }
+</script>
+</body>
+</html>
